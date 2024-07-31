@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let value = 'abccba';
+      let len = value.length;
+      let isPolindrome;
+      for (let i = 0; i < len / 2; i++) {
+        if (value[i] !== value[len - 1 - i]) {
+          isPolindrome = false;
+          break;
+        }
+        isPolindrome = true;
+      }
+
+      if (isPolindrome) {
+        console.log('Значення ' + value + ' є палідромом');
+      } else {
+        console.log('Значення ' + value + ' НЕ є палідромом');
+      }
+    </script>
+  </body>
+</html>

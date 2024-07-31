@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function getValue(message) {
+        while (true) {
+          let value = prompt(message);
+          let isValid = !isNaN(value) && value !== '' && value !== null;
+          if (isValid) {
+            return Number(value);
+          }
+        }
+      }
+      let start = getValue('Початок');
+      let end = getValue('Кінець');
+
+      if (end < start) {
+        console.log('Кінець повинен буи більши за початок');
+      } else {
+        let sum = 0;
+        for (let i = start; i <= end; i++) {
+          sum += i;
+        }
+        console.log(`Сума значень в діапозоні від ${start} до ${end} дорівнює ${sum}`);
+      }
+    </script>
+  </body>
+</html>
