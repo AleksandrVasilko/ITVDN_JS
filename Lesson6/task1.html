@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function min(array) {
+        let min = Number.MAX_VALUE;
+        for (const value of array) {
+          if (value < min) {
+            min = value;
+          }
+        }
+        return min;
+      }
+
+      function max(array) {
+        return Math.max(...array);
+      }
+
+      function sum(array) {
+        let sum = 0;
+        for (const value of array) {
+          sum += value;
+        }
+        return sum;
+      }
+
+      let values = [10, 20, 4, 6, 11, 9, 125, 1, -8, 0, 3];
+
+      const m = min(values);
+      console.log(min(values));
+      console.log(max(values));
+      console.log(sum(values));
+    </script>
+  </body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script src="../cammon/my-library.js"></script>
+    <script>
+      function getCircleArea(radius) {
+        return Math.PI * Math.pow(radius, 2);
+      }
+
+      function getCirclePerimeter(radius) {
+        return 2 * Math.PI * radius;
+      }
+
+      let radius = getNumericValue('Введіть радіус');
+      let area = getCircleArea(radius);
+      let perimeter = getCirclePerimeter(radius);
+
+      console.log(area);
+      console.log(perimeter);
+    </script>
+  </body>
+</html>

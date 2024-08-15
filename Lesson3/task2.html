@@ -6,6 +6,17 @@
     <title>Document</title>
   </head>
   <body>
+    <p>
+      Введіть значення для перетворення
+      <input type="text" id="temp" />
+    </p>
+    <div>
+      <button id="btnToC">У градуси Цельсія</button>
+      <button id="btnToF">У градусах по Фаренгйту</button>
+    </div>
+    <div>
+      <b id="output"></b>
+    </div>
     <script>
       let birthYear = +prompt('Введіть рік наодження');
       let currentYear = new Date().getFullYear();
