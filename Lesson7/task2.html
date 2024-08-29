@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let options = {
+        circle: function () {
+          console.log('circle');
+        },
+
+        rectengle: function () {
+          console.log('rectengle');
+        },
+
+        traingel: function () {
+          console.log('traingel');
+        },
+      };
+
+      let option = prompt('select circle, rectengle or traingel');
+      options[option]();
+    </script>
+  </body>
+</html>
