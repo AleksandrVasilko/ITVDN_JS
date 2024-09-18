@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .form-group {
+        margin: 4px;
+      }
+
+      .form-group label {
+        width: 75px;
+        display: inline-block;
+      }
+    </style>
+  </head>
+  <body>
+    <form action="http://itvdn.com/ua/catalog" method="GET">
+      <div class="form-group">
+        <label>Запит</label>
+        <input type="text" name="search" />
+      </div>
+      <div class="form-grop">
+        <input type="submit" value="Пошук" />
+      </div>
+    </form>
+
+    <script>
+      const form = document.forms[0];
+      form.addEventListener('submit', function (event) {
+        alert('Подія submit');
+
+        if (form.search.value.length === 0) {
+          event.preventDefault();
+        }
+      });
+
+      form.search.addEventListener('focus', function () {
+        console.log('focus');
+      });
+
+      form.search.addEventListener('blur', function () {
+        console.log('blur');
+      });
+      form.search.addEventListener('change', function () {
+        console.log('change');
+      });
+      form.search.addEventListener('input', function () {
+        console.log('input');
+      });
+    </script>
+  </body>
+</html>
